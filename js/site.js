@@ -12,8 +12,8 @@ $.noConflict();
           function(data){
             $('#bmi').append(
             '<p>Your BMI is:</p>)'+ data.bmi
-          });
-        );
+          )
+      });     
     });
   event.preventDefault();
   });
