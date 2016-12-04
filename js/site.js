@@ -3,14 +3,20 @@ $.noConflict();
 (function($){
   $(document).ready(function() {
     $('#bmi-form').on('submit', function(event) {
-      var endpoint = $('https://bmi.p.mashape.com/');
-      var weight = $('#bmi-weight');
-      var height = $('#bmi-height');
-      var key = $('WyFUMDOkdrmshARoxfXDWLZmMeccp180tJEjsnCz3MCFuXJdEo')    
-      var url = endpoint + weight + height + key;
+      //saving inputs
+      var weight = document.getElementById('bmi-weight');
+      var height = document.getElementById('bmi-height');
       
-      $.get(url);
       event.preventDefault();
+      
+       $.get(
+          'https://bmi.p.mashape.com/' + weight + height + WyFUMDOkdrmshARoxfXDWLZmMeccp180tJEjsnCz3MCFuXJdEo
+        );
+      function(data){
+        var x = data[0];
+        console.log(q.weight);
+        console.log(q.height);
+      };
     });
   });
 });
