@@ -12,7 +12,7 @@ $.noConflict();
        $.get(
           'https://bmi.p.mashape.com/' + weight + height + WyFUMDOkdrmshARoxfXDWLZmMeccp180tJEjsnCz3MCFuXJdEo
         );
-      function(data){
+      function getBMI(data){
         var x = data[0];
         console.log(q.weight);
         console.log(q.height);
