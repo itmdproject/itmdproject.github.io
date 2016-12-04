@@ -11,8 +11,8 @@ $.noConflict();
           'https://bmi.p.mashape.com/WyFUMDOkdrmshARoxfXDWLZmMeccp180tJEjsnCz3MCFuXJdEo' + weight + height,
           function(data){
             $('#bmi').append(
-            '<p>Your BMI is:</p>)'+ data.bmi;
-          }
+            '<p>Your BMI is:</p>)'+ data.bmi
+          });
         );
     });
   event.preventDefault();
