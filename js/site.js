@@ -1,14 +1,6 @@
-// TODO: Use a function closure and release global $
-$(document).ready(function() {
-  $('#bmi-form').on('submit', function(event) {
-    var query = $('#bmi-weight', '#bmi-height'").val();
-    $.get(
-      'https://bmi.p.mashape.com/' + query,
-      function(data) {
-        $('#bmi').append(
-           xhr.setRequestHeader("X-Mashape-Authorization", "WyFUMDOkdrmshARoxfXDWLZmMeccp180tJEjsnCz3MCFuXJdEo");
-        );
-      });
-    event.preventDefault();
-  });
-});
+HttpResponse<JsonNode> response = Unirest.post("https://bmi.p.mashape.com/")
+.header("X-Mashape-Key", "WyFUMDOkdrmshARoxfXDWLZmMeccp180tJEjsnCz3MCFuXJdEo")
+.header("Content-Type", "application/json")
+.header("Accept", "application/json")
+.body("{\"weight\":{\"value\":\"85.00\",\"unit\":\"kg\"},\"height\":{\"value\":\"170.00\",\"unit\":\"cm\"},\"sex\":\"m\",\"age\":\"24\",\"waist\":\"34.00\",\"hip\":\"40.00\"}")
+.asJson();
