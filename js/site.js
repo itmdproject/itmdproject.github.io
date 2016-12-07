@@ -4,8 +4,8 @@ $.noConflict();
   $(document).ready(function() {
     $('#bmi-form').on('submit', function(event) {
       //saving inputs
-      var weight = $('#bmi-weight').val();
-      var height = $('#bmi-height').val();
+      var 'weight' = $('#bmi-weight').val();
+      var 'height' = $('#bmi-height').val();
       
       $.get(
           'https://bmi.p.mashape.com/WyFUMDOkdrmshARoxfXDWLZmMeccp180tJEjsnCz3MCFuXJdEo' + 'weight' + 'height';
