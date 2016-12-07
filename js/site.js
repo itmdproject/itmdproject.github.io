@@ -14,7 +14,7 @@ $.noConflict();
             '<p>Your BMI is:</p>)'+ data.bmi.value;
             '<p>Your status is:</p>'+data.bmi.status;
             '<p>Your risk is:</p>'+data.bmi.risk;
-          )
+          );
       });     
     });
   event.preventDefault();
