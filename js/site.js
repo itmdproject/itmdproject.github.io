@@ -12,9 +12,9 @@ $.noConflict();
           + '+height+',
           function(data,json){
             $('#bmi').append(
-            '<p>Your BMI is: + '+data.bmi.value+'</p>'
-            '<p>Your status is: + '+data.bmi.status+'</p>'
-            '<p>Your risk is: + '+data.bmi.risk+'</p>'
+            '<p>Your BMI is: '+data.bmi.value+'</p>'
+            '<p>Your status is: '+data.bmi.status+'</p>'
+            '<p>Your risk is: '+data.bmi.risk+'</p>'
           );
       });     
     });
