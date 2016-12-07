@@ -8,7 +8,7 @@ $.noConflict();
       var height = $('#bmi-height').val();
       
       $.get(
-          'https://bmi.p.mashape.com/WyFUMDOkdrmshARoxfXDWLZmMeccp180tJEjsnCz3MCFuXJdEo' + 'weight' + 'height',
+          'https://bmi.p.mashape.com/WyFUMDOkdrmshARoxfXDWLZmMeccp180tJEjsnCz3MCFuXJdEo' '+weight+' '+height+',
           function(data,json){
             $('#bmi').append(
             '<p>Your BMI is:</p>)'+ data.bmi.value;
@@ -19,4 +19,4 @@ $.noConflict();
     });
   event.preventDefault();
   });
-});
+});(jQuery);
